@@ -15,7 +15,7 @@ function Main() {
       .then(data => setData({data}));
     }
   return (
-    <div>
+    <div className="main">
  
    {  data && data.data.data.map((i, index) => {
        return <Card data={i} key={index}/>

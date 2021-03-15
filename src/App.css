@@ -13,6 +13,77 @@
   }
 }
 
+.main{
+  background-color: rgb(170, 170, 170);
+
+}
+
 .eachCard{
-  border: 1px solid blue;
+  width: 30%;
+  margin: 1%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(56, 56, 56);
+  display: inline-table;
+  border-radius: 12px;
+}
+
+@media only screen and  (max-width: 724px) {
+  .eachCard {
+    width: 45%;
+  }
+}
+
+@media only screen and  (max-width: 424px) {
+  .eachCard {
+    width: 90%;
+  }
+}
+
+.eachCard .imageContainer{
+  position: relative; 
+  width: 100%;
+}
+
+.eachCard .imageContainer img {
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+}
+
+.eachCard .imageContainer .duration{
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  color: white;
+  border-radius: 8px;
+  padding: 4px 11px;
+  background-color: rgb(9, 17, 53, 0.8);
+}
+
+.eachCard .imageContainer .duration p{
+margin: 0;
+}
+
+
+.eachCard .details{
+  padding: 6%;
+  height: 250px;
+  text-align: left;
+  text-overflow: "-";
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+  overflow: auto;
+}
+
+.eachCard .details h3{
+  color: rgb(70, 56, 116);
+}
+
+.eachCard .details p{
+  text-overflow: ellipsis;
+}
+
+.startPathway{
+  color: rgb(70, 56, 116);
+  padding: 6%;
+  text-align: left;
 }
