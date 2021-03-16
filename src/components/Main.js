@@ -40,7 +40,7 @@ function Main() {
           <SearchBar input={input} onChange={updateInput} />
           <Card data={dataFiltered} />
         </div>
-      ): <p>Loading...</p>}
+      ):   <div className="loading"></div>}
     </div>
   );
 }
