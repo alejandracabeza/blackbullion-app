@@ -35,9 +35,12 @@ function Main() {
 
   return (
     <div className="main">
-      <SearchBar input={input} onChange={updateInput} />
-      {data && <Card data={dataFiltered} />}
-      {!data.length && <p>Loading...</p>}
+      {data.length ? (
+        <div>
+          <SearchBar input={input} onChange={updateInput} />
+          <Card data={dataFiltered} />
+        </div>
+      ): <p>Loading...</p>}
     </div>
   );
 }

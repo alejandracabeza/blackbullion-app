@@ -6,6 +6,21 @@
   background-color: rgb(204, 204, 204);
 }
 
+.searchBar{
+  width: 60%;
+    margin: 4%;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: 1%;
+    font-size: 1.1em;
+}
+
+.searchBar:focus{
+  background-color: rgb(238, 235, 247);
+  transition: all 0.3s ease;
+}
+
 .eachCard {
   width: 30%;
   margin: 1%;
