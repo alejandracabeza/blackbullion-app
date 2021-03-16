@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
+import React from "react";
 
 function Card(data) {
- 
   return (
-    <div className="eachCard">
-        <div className="imageContainer">
-            <img src={data.data.image}/>
-            <div className="duration">
-                <p>{data.data.duration} min</p>
+    <div>
+      {data &&
+        data.data.map((eachCard) => {
+          return (
+            <div className="eachCard">
+              <div className="imageContainer">
+                <img src={eachCard.image} />
+                <div className="duration">
+                  <p>{eachCard.duration} min</p>
+                </div>
+              </div>
+              <div className="details">
+                <h2>{eachCard.title}</h2>
+                <p>{eachCard.description}</p>
+              </div>
+              <div className="startPathway">
+                <a href={eachCard.url}>
+                  Start Pathway <i className="fa fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-        </div>
-        <div className="details">
-            <h3>{data.data.title}</h3>
-            <p>{data.data.description}</p>
-          
-        </div>
-        <div className="startPathway">
-            <a href={data.data.url}/>Start Pathway <i className="fa fa-arrow-right"></i>
-        </div>
+          );
+        })}
     </div>
   );
 }
