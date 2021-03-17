@@ -8,7 +8,7 @@ function Card({ data: dataCards }) {
           return (
             <div className="eachCard" key={index}>
               <div className="imageContainer">
-                <img src={eachCard.image} alt="information course"/>
+                <img src={eachCard.image} alt="information course" />
                 <div className="duration">
                   <p>{eachCard.duration} min</p>
                 </div>

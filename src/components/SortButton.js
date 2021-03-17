@@ -3,7 +3,7 @@ import React from "react";
 function SortButton({ onClick: setSortButton }) {
   return (
     <div className="sortButton">
-        <button onClick={()=> setSortButton()}>Sort by Duration</button>
+      <button onClick={() => setSortButton()}>Sort by Duration</button>
     </div>
   );
 }
