@@ -1,20 +1,20 @@
 import React from "react";
 
-function Card(eachCard) {
+function Card({ data: dataCard }) {
   return (
             <div className="eachCard">
               <div className="imageContainer">
-                <img src={eachCard.data.image} />
+                <img src={dataCard.image} />
                 <div className="duration">
-                  <p>{eachCard.data.duration} min</p>
+                  <p>{dataCard.duration} min</p>
                 </div>
               </div>
               <div className="details">
-                <h2>{eachCard.data.title}</h2>
-                <p>{eachCard.data.description}</p>
+                <h2>{dataCard.title}</h2>
+                <p>{dataCard.description}</p>
               </div>
               <div className="startPathway">
-                <a href={eachCard.data.url}>
+                <a href={dataCard.url}>
                   Start Pathway <i className="fa fa-arrow-right"></i>
                 </a>
               </div>

@@ -44,8 +44,8 @@ function Main() {
           <SearchBar input={input} onChange={updateInput} />
           <SortButton onClick={handleSortButton} />
           {dataFiltered.length &&
-            dataFiltered.map((card) => {
-              return <Card data={card} />;
+            dataFiltered.map((card, index) => {
+              return <Card data={card}  key={index}/>;
             })}
         </div>
       ) : (
