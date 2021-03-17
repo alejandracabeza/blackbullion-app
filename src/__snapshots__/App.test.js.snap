@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots Cards snapshots 1`] = `
+<div>
+  <div
+    className="eachCard"
+    key="0"
+  >
+    <div
+      className="imageContainer"
+    >
+      <img
+        alt="information course"
+        src="https://prodcontent.blackbullion.com/images/featured/lesson2.png"
+      />
+      <div
+        className="duration"
+      >
+        <p>
+          130
+           min
+        </p>
+      </div>
+    </div>
+    <div
+      className="details"
+    >
+      <h2>
+        Peer Pressure and Advertising
+      </h2>
+      <p>
+        Advertising is something that we are all surrounded by - online, watching TV or driving past a billboard. It can influence us and those around us more than we might realise. In this video, Joe and Jade consider some of the issues around advertising but also peer-pressure before they go shopping. They realise how important it to start assessing what you want to take control of their money.  
+      </p>
+    </div>
+    <div
+      className="startPathway"
+    >
+      <a
+        href="https://www.blackbullion.com/pathways/key-stage-4"
+      >
+        Start Pathway 
+        <i
+          className="fa fa-arrow-right"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    className="eachCard"
+    key="1"
+  >
+    <div
+      className="imageContainer"
+    >
+      <img
+        alt="information course"
+        src="https://prodcontent.blackbullion.com/images/featured/lesson3.png"
+      />
+      <div
+        className="duration"
+      >
+        <p>
+          269
+           min
+        </p>
+      </div>
+    </div>
+    <div
+      className="details"
+    >
+      <h2>
+        Needs, Wants and Budgeting
+      </h2>
+      <p>
+        There are many things that we often consider as ‘needs’ but it might be worth taking a moment to think about whether this is what they actually are. You might find after a little thinking that it’s just a ‘want’. Jade and Joe discuss the financial implications of this in their finance vlog and the importance of budgeting. 
+      </p>
+    </div>
+    <div
+      className="startPathway"
+    >
+      <a
+        href="https://www.blackbullion.com/pathways/key-stage-4"
+      >
+        Start Pathway 
+        <i
+          className="fa fa-arrow-right"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`snapshots Main snapshot 1`] = `
+<div
+  className="main"
+>
+  <div
+    className="loading"
+  />
+</div>
+`;
+
+exports[`snapshots SearchBar snapshot 1`] = `
+<div
+  className="searchBarContainer"
+>
+  <input
+    className="searchBar"
+    onChange={[Function]}
+    placeholder="Search..."
+  />
+</div>
+`;

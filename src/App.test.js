@@ -2,6 +2,8 @@ import React from "react";
 import { shallow, mount } from "enzyme";
 import Main from "./components/Main";
 import Card from "./components/Card";
+import SearchBar from "./components/SearchBar"
+import toJson from "enzyme-to-json";
 
 const dataCards = [
   {
@@ -33,7 +35,23 @@ describe("rendering components", () => {
 
 describe("passing props", () => {
   const cardsWrappper = mount(<Card data={dataCards} />);
-  it("accepts user account props", () => {
+  it("accepts course props", () => {
     expect(cardsWrappper.props().data).toEqual(dataCards);
+  });
+});
+
+
+describe("snapshots", () => {
+  it("Main snapshot", () => {
+    const tree = shallow(<Main/>);
+    expect(toJson(tree)).toMatchSnapshot();
+  });
+  it("Cards snapshots", () => {
+    const cardsTree = shallow(<Card data={dataCards} />);
+    expect(toJson(cardsTree)).toMatchSnapshot();
+  });
+  it("SearchBar snapshot", () => {
+    const searchBarnTree = shallow(<SearchBar />);
+    expect(toJson(searchBarnTree)).toMatchSnapshot();
   });
 });
