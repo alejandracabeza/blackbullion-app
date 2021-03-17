@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import SearchBar from "./SearchBar";
+import { getData } from "../api/index";
 
 function Main() {
   let [data, setData] = useState([]);
@@ -8,16 +9,10 @@ function Main() {
   const [dataFiltered, setDataFiltered] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    getData().then((data) => {
+      return setDataFiltered(data), setData(data);
+    });
   }, []);
-
-  function fetchData() {
-    fetch("http://www.blackbullion.com/_dev/api/lessons")
-      .then((response) => response.json())
-      .then((data) => {
-        return setDataFiltered(data.data), setData(data.data);
-      });
-  }
 
   async function updateInput(input) {
     if (data) {
@@ -40,7 +35,9 @@ function Main() {
           <SearchBar input={input} onChange={updateInput} />
           <Card data={dataFiltered} />
         </div>
-      ):   <div className="loading"></div>}
+      ) : (
+        <div className="loading"></div>
+      )}
     </div>
   );
 }
