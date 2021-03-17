@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchBar({ input: keyword, onChange: setKeyword }) {
   return (
-    <div>
+    <div className="searchBarContainer">
       <input
         className="searchBar"
         value={keyword}

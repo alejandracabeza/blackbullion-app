@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import SearchBar from "./SearchBar";
 import { getData } from "../api/index";
+import SortButton from "./SortButton";
 
 function Main() {
   let [data, setData] = useState([]);
   const [input, setInput] = useState("");
   const [dataFiltered, setDataFiltered] = useState([]);
+  const [isSorted, setSortButton] = useState(false);
 
   useEffect(() => {
     getData().then((data) => {
@@ -17,7 +19,6 @@ function Main() {
   async function updateInput(input) {
     if (data) {
       const filtered = data.filter((i) => {
-        console.log(input);
         return (
           i.title.toLowerCase().includes(input) ||
           i.description.toLowerCase().includes(input)
@@ -28,12 +29,24 @@ function Main() {
     }
   }
 
+  async function handleSortButton() {
+    setSortButton(!isSorted);
+    let sortedData = dataFiltered.sort(function (a, b) {
+      return isSorted ? b.duration - a.duration : a.duration - b.duration;
+    });
+    setDataFiltered([...sortedData]);
+  }
+
   return (
     <div className="main">
       {data.length ? (
         <div>
           <SearchBar input={input} onChange={updateInput} />
-          <Card data={dataFiltered} />
+          <SortButton onClick={handleSortButton} />
+          {dataFiltered.length &&
+            dataFiltered.map((card) => {
+              return <Card data={card} />;
+            })}
         </div>
       ) : (
         <div className="loading"></div>
