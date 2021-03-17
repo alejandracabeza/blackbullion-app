@@ -43,10 +43,7 @@ function Main() {
         <div>
           <SearchBar input={input} onChange={updateInput} />
           <SortButton onClick={handleSortButton} />
-          {dataFiltered.length &&
-            dataFiltered.map((card, index) => {
-              return <Card data={card}  key={index}/>;
-            })}
+          <Card data={dataFiltered} />;
         </div>
       ) : (
         <div className="loading"></div>
