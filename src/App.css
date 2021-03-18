@@ -115,7 +115,7 @@
   margin: 0;
 }
 
-.eachCard .details {
+.eachCard .cardInfo {
   padding: 6%;
   height: 250px;
   text-align: left;
@@ -123,12 +123,19 @@
   overflow: auto;
 }
 
-.eachCard .details h3 {
+.eachCard .cardInfo h3 {
   color: rgb(70, 56, 116);
 }
 
-.eachCard .details p {
+.eachCard .cardInfo p {
   text-overflow: ellipsis;
+}
+
+.seeMore {
+  background-color: rgb(240, 248, 255);
+  padding: 2%;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .startPathway {
@@ -144,4 +151,60 @@
 
 .startPathway a:hover {
   color: rgb(114, 88, 199);
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1010;
+  height: 60%;
+  width: 90%;
+  background-color: white;
+  border-radius: 17px;
+  padding: 2%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 490px) {
+  .modalContainer {
+    height: 65%;
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 724px) {
+  .modalContainer {
+    height: 65%;
+    width: 65%;
+  }
+}
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(186, 201, 214, 0.9);
+}
+
+.closeModal {
+  text-align: end;
+  margin-top: 0;
+}
+
+.modalContainer .linkCourse {
+  margin: 10%;
+}
+
+.modalContainer .linkCourse a {
+  color: rgb(70, 56, 116);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3em;
+  background-color: rgb(240, 248, 255);
+  padding: 3%;
+  border-radius: 6px;
 }
